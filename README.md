@@ -6,5 +6,5 @@ Just clone this repo to your directory
 ```
 git clone https://github.com/ptmew/vimrc.git .vim
 ```
-#THEME
+# THEME
 https://github.com/altercation/vim-colors-solarized
