@@ -1,9 +1,23 @@
+"ADD THEME
+"change pallete color
+let g:solarized_termcolors=256
+syntax enable
+set background=dark
+colorscheme solarized
+hi clear CursorLine
+augroup CLClear
+    autocmd! ColorScheme * hi clear CursorLine
+augroup END
 """""""""""""""""""
-" LINE
+" UI
 """""""""""""""""""
 
 " show line numbers
 set number
+ " visual autocomplete for command menu
+set wildmenu
+" highlight matching [{()}]
+set showmatch
 """""""""""""""""""
 " Indents
 """""""""""""""""""
@@ -20,3 +34,14 @@ set expandtab
 set smarttab
 " when creating a new line, copy the idention from the line above
 set autoindent
+"""""""""""""""""""
+" Cursor
+"""""""""""""""""""
+"show the current line
+set cursorline
+" show the column line for the current cursor
+set cursorcolumn
+"set the column line color
+hi CursorColumn ctermbg=235
+
+
