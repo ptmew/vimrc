@@ -2,7 +2,7 @@
 This is my Vim config.
 
 ## HOW TO USE 
-Just clone this repo to your directory 
+Just clone the repo with the command below to your home directory 
 ```
 git clone https://github.com/ptmew/vimrc.git .vim
 ```
