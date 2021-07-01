@@ -1,47 +1,46 @@
+"""""""""""""""""""
 "ADD THEME
-"change pallete color
-let g:solarized_termcolors=256
-syntax enable
-set background=dark
-colorscheme solarized
+"""""""""""""""""""
+let g:solarized_termcolors=256	" Change pallete color
+syntax enable			" Enable syntax
+set background=dark		" Dark blackground
+colorscheme solarized		" Use solarized colorscheme
 hi clear CursorLine
 augroup CLClear
     autocmd! ColorScheme * hi clear CursorLine
 augroup END
-"""""""""""""""""""
-" UI
-"""""""""""""""""""
 
-" show line numbers
-set number
- " visual autocomplete for command menu
-set wildmenu
-" highlight matching [{()}]
-set showmatch
 """""""""""""""""""
-" Indents
+" Display
 """""""""""""""""""
+set number			" Show line numbers
+set wildmenu 			" Visual autocomplete for command menu
+set showmatch			" Highlight matching brace
 
-" show existing tab with 4 spaces width
-filetype plugin indent on
-" when indenting with '>', use 4 spaces width
-set tabstop=4
-" On pressing tab, insert 4 spaces
-set shiftwidth=4
-" replace tab with spaces
-set expandtab
-" when delete whitespace at the begining of the line, delete 1 tab worth of spaces
-set smarttab
-" when creating a new line, copy the idention from the line above
-set autoindent
+"""""""""""""""""""
+" Search and Replace
+"""""""""""""""""""
+set hlsearch			" Highlight all search results
+set smartcase			" Enable smart-case search
+set ignorecase			" Aways case-insensitive
+set incsearch			" Searches for strings incrementally
+
+"""""""""""""""""""
+" Identation
+"""""""""""""""""""
+filetype plugin indent on	" Show existing tab with 4 spaces width
+
+set tabstop=4			" When indenting with '>', use 4 spaces width
+set autoindent			" Auto-indent new lines
+set expandtab			" Use spaces instead of tabs
+set shiftwidth=4		" On pressing tab, insert 4 spaces
+set smartindent			" Enable smart-indent
+set smarttab			" Delete 1 tab whitespace at the begining of the line
+set softtabstop=4		" Nuber of spaces per Tab
+
 """""""""""""""""""
 " Cursor
 """""""""""""""""""
-"show the current line
-set cursorline
-" show the column line for the current cursor
-set cursorcolumn
-"set the column line color
-hi CursorColumn ctermbg=235
-
-
+set cursorline			" Show the current line
+set cursorcolumn		" Show the column line for the current cursor
+hi CursorColumn ctermbg=235	" Set the column line color
